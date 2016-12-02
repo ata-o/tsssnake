@@ -1,2 +1,3 @@
 # Snake
-a snake clone coded in C++ using SimpleDraw at https://github.com/fstasel/SimpleDraw
+
+a simple, raw snake clone coded in C++ using SimpleDraw (https://github.com/fstasel/SimpleDraw)
