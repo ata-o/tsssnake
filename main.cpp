@@ -3,11 +3,25 @@
 #include "Fruit.h"
 #include "Snake.h"
 #include <string> 
+#include <Windows.h>
+#define IDI_ICON1 //i added an icon to this app because it makes me happy
+
+
+void HideConsole()
+{
+	::ShowWindow(::GetConsoleWindow(), SW_HIDE);
+}
+
+void ShowConsole()
+{
+	::ShowWindow(::GetConsoleWindow(), SW_SHOW);
+}
 using namespace std;
 
 int main()
 {
-	setWindowSize(500, 500);
+	HideConsole();
+	setWindowSize(510, 535); //i changed these values because the window overlaps with the background
 
 	bool screenFailFlag = false;
 	bool selfFailFlag = false;
@@ -48,7 +62,13 @@ int main()
 
 		snake.move();
 
-		Sleep(100);
+		Sleep(75);
+		if (getKey() == 'P')
+		{
+			while (getKey() == 'P')
+			{
+			}
+		}//yes, you can pause the game now
 	}
 	if (screenFailFlag)
 	{
